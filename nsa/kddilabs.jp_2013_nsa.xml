@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns4:nsa xmlns:ns4="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns2="urn:ietf:params:xml:ns:vcard-4.0" 
-        expires="2017-11-02T16:15:07.922Z" 
+        expires="2017-11-02T17:15:07.922Z" 
         id="urn:ogf:network:kddilabs.jp:2013:nsa" 
-        version="2016-11-02T16:15:07.922Z">
+        version="2016-11-02T17:15:07.922Z">
     <name>KDDI Labs uPA</name>
     <softwareVersion>G-Lambda-K</softwareVersion>
-    <startTime>2016-11-02T16:15:07.922Z</startTime>
+    <startTime>2016-11-02T16:17:07.922Z</startTime>
     <adminContact>
         <ns2:vcard>
             <ns2:uid>
@@ -44,4 +44,5 @@
     </interface>
     <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
     <peersWith role="PA">urn:ogf:network:jgn-x.jp:2013:nsa</peersWith>
+    <peersWith role="PA">urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
 </ns4:nsa>
