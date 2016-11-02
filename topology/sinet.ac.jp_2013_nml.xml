@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Topology xmlns="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:sd="http://schemas.ogf.org/nsi/2013/12/services/definition"
+        id="urn:ogf:network:sinet.ac.jp:2013:topology" version="2016-11-02T06:50:07Z">
+    <name>sinet.ac.jp</name>
+    
+    <!-- Time this document is valid. -->
+    <Lifetime>
+        <start>2016-11-02T06:50:07Z</start>
+        <end>2017-11-02T06:50:07Z</end>
+    </Lifetime>
+    
+    <!-- Client enpoint National Institute of Informatics -->
+    <BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_nii-chiba">
+        <name>sinet_nii-chiba</name>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:nii-chiba_sinet"/>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_nii-chiba"/>
+    </BidirectionalPort>
+    
+    <!-- PacificWave peering. -->
+    <BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_manlan">
+        <name>sinet-to-pacwave-los_angeles</name>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:manlan_sinet"/>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_manlan"/>
+    </BidirectionalPort>
+    
+    <!-- MANLAN peering. -->
+    <BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_pacificwave">
+        <name>sinet-to-manlan</name>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:pacificwave_sinet"/>
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_pacificwave"/>
+    </BidirectionalPort>
+    
+    <!-- National Institute of Informatics client uni-directional endpoints. -->
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:nii-chiba_sinet">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">2030-2049</LabelGroup>
+        </PortGroup>
+    </Relation>  
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_nii-chiba">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">2030-2049</LabelGroup>
+        </PortGroup>
+    </Relation>
+    
+    <!-- The Automated GOLE EVTS service definition. -->
+    <sd:serviceDefinition id="urn:ogf:network:sinet.ac.jp:2013:topology:ServiceDefinition:EVTS.A-GOLE">
+        <name>GLIF Automated GOLE Ethernet VLAN Transfer Service</name>
+        <serviceType>
+            http://services.ogf.org/nsi/2013/12/descriptions/EVTS.A-GOLE
+        </serviceType>
+    </sd:serviceDefinition>
+    
+    <!-- Default SwitchingService definition is to support labelSwapping. -->
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasService">
+        <SwitchingService id="urn:ogf:network:sinet.ac.jp:2013:topology:ServiceDomain:a-gole:A-GOLE-EVTS" labelSwapping="true" labelType="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">
+            <sd:serviceDefinition id="urn:ogf:network:sinet.ac.jp:2013:topology:ServiceDefinition:EVTS.A-GOLE"/>
+        </SwitchingService>
+    </Relation>
+    
+    <!-- PacificWave peering uni-directional endpoints. -->
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:manlan_sinet">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</LabelGroup>
+            <Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:+:out"/>
+            </Relation>
+        </PortGroup>
+    </Relation>
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_manlan">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</LabelGroup>
+            <Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:+:in"/>
+            </Relation>
+        </PortGroup>
+    </Relation>
+    
+    <!-- MANLAN peering uni-directional endpoints. -->
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:pacificwave_sinet">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</LabelGroup>
+            <Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <PortGroup id="urn:ogf:network:lsanca.pacificwave.net:2016:topology:sinet-los_angeles-out"/>
+            </Relation>
+        </PortGroup>
+    </Relation>
+    <Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+        <PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_pacificwave">
+            <LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</LabelGroup>
+            <Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <PortGroup id="urn:ogf:network:lsanca.pacificwave.net:2016:topology:sinet-los_angeles-in"/>
+            </Relation>
+        </PortGroup>
+    </Relation>
+
+</Topology>
+
