@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns4:nsa xmlns:ns4="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns2="urn:ietf:params:xml:ns:vcard-4.0" 
+        expires="2017-11-02T16:15:07.922Z" 
+        id="urn:ogf:network:kddilabs.jp:2013:nsa" 
+        version="2016-11-02T16:15:07.922Z">
+    <name>KDDI Labs uPA</name>
+    <softwareVersion>G-Lambda-K</softwareVersion>
+    <startTime>2016-11-02T16:15:07.922Z</startTime>
+    <adminContact>
+        <ns2:vcard>
+            <ns2:uid>
+                <ns2:uri>urn:uuid:8839a3c4-47ab-460a-ae95-73e6fc0f7b3b</ns2:uri>
+            </ns2:uid>
+            <ns2:prodid>
+                <ns2:text>G-Lambda-K uPA</ns2:text>
+            </ns2:prodid>
+            <ns2:rev>
+                <ns2:timestamp>20161020T000000Z</ns2:timestamp>
+            </ns2:rev>
+            <ns2:kind>
+                <ns2:text>individual</ns2:text>
+            </ns2:kind>
+            <ns2:fn>
+                <ns2:text>Takahiro Miyamoto</ns2:text>
+            </ns2:fn>
+            <ns2:n>
+                <ns2:surname>Miyamoto</ns2:surname>
+                <ns2:given>Takahiro</ns2:given>
+            </ns2:n>
+        </ns2:vcard>
+    </adminContact>
+    <location>
+        <longitude>139.517</longitude>
+        <latitude>35.879</latitude>
+    </location>
+    <networkId>urn:ogf:network:kddilabs.jp:2013:topology</networkId>
+    <interface>
+        <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
+        <href>http://210.196.65.114:9352/2013/07/connectionprovider</href>
+    </interface>
+    <interface>
+        <type>application/vnd.ogf.nsi.topology.v2+xml</type>
+        <href>https://raw.githubusercontent.com/AutomatedGOLE/nsi-discovery-documents/master/topology/kddilabs.jp_2013_nml.xml</href>
+    </interface>
+    <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
+    <peersWith role="PA">urn:ogf:network:jgn-x.jp:2013:nsa</peersWith>
+</ns4:nsa>
