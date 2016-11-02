@@ -1,7 +1,10 @@
-<ns3:nsa xmlns:ns3="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns2="urn:ietf:params:xml:ns:vcard-4.0" expires="2017-01-01T10:15:07.923Z" id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2016-11-02T10:15:07.922Z">
+<ns3:nsa xmlns:ns3="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns2="urn:ietf:params:xml:ns:vcard-4.0" 
+        expires="2017-11-02T16:15:07.922Z" 
+        id="urn:ogf:network:sinet.ac.jp:2013:nsa" 
+        version="2016-11-02T16:15:07.922Z">
     <name>sinet-nsi-upa</name>
     <softwareVersion>undefined</softwareVersion>
-    <startTime>2016-11-02T10:15:07.922Z</startTime>
+    <startTime>2016-11-02T16:15:07.922Z</startTime>
     <adminContact>
         <ns2:vcard>
             <ns2:uid>
@@ -32,7 +35,7 @@
     <networkId>urn:ogf:network:sinet.ac.jp:2013:topology</networkId>
     <interface>
         <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
-	<!-- This is not correct and only a place holder. -->
+	     <!-- This is not correct and only a place holder. -->
         <href>https://157.1.137.181:28443/nsi2/services/ConnectionProvider</href>
     </interface>
     <interface>
