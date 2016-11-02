@@ -40,7 +40,7 @@
     </interface>
     <interface>
         <type>application/vnd.ogf.nsi.topology.v2+xml</type>
-        <href>https://raw.githubusercontent.com/AutomatedGOLE/nsi-discovery-documents/topology/sinet.ac.jp_2013_nml.xml</href>
+        <href>https://raw.githubusercontent.com/AutomatedGOLE/nsi-discovery-documents/master/topology/sinet.ac.jp_2013_nml.xml</href>
     </interface>
     <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
     <feature type="org.ogf.nsi.cs.v2.commitTimeout">300</feature>
