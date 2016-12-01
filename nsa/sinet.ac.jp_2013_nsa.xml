@@ -1,17 +1,19 @@
 <ns3:nsa xmlns:ns3="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns2="urn:ietf:params:xml:ns:vcard-4.0" 
         expires="2017-11-02T16:15:07.922Z" 
         id="urn:ogf:network:sinet.ac.jp:2013:nsa" 
-        version="2016-11-02T16:15:07.922Z">
-    <name>sinet-nsi-upa</name>
+        version="2016-12-01T16:15:07.922Z">
+    <name>sinet.ac.jp</name>
     <softwareVersion>undefined</softwareVersion>
-    <startTime>2016-11-02T16:15:07.922Z</startTime>
+    <startTime>2016-12-01T16:15:07.922Z</startTime>
     <adminContact>
         <ns2:vcard>
             <ns2:uid>
-                <ns2:uri>urn:uuid:86125a05-d9b6-4c6e-84ee-0a3455424999</ns2:uri>
+                <ns2:uri>
+                    https://150.100.12.170:28443/sinet_upa/services/connectionprovider#adminContact
+                </ns2:uri>
             </ns2:uid>
             <ns2:prodid>
-                <ns2:text>SINET uPA</ns2:text>
+                <ns2:text>SINET PA</ns2:text>
             </ns2:prodid>
             <ns2:rev>
                 <ns2:timestamp>20161020T000000Z</ns2:timestamp>
@@ -20,11 +22,11 @@
                 <ns2:text>individual</ns2:text>
             </ns2:kind>
             <ns2:fn>
-                <ns2:text>Atsuko Takefusa</ns2:text>
+                <ns2:text>Takashi Kurimoto</ns2:text>
             </ns2:fn>
             <ns2:n>
-                <ns2:surname>Takefusa</ns2:surname>
-                <ns2:given>Atsuko</ns2:given>
+                <ns2:surname>Kurimoto</ns2:surname>
+                <ns2:given>Takashi</ns2:given>
             </ns2:n>
         </ns2:vcard>
     </adminContact>
@@ -35,15 +37,13 @@
     <networkId>urn:ogf:network:sinet.ac.jp:2013:topology</networkId>
     <interface>
         <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
-	     <!-- This is not correct and only a place holder. -->
-        <href>https://157.1.137.181:28443/nsi2/services/ConnectionProvider</href>
+        <href>https://150.100.12.170:28443/sinet_upa/services/connectionprovider</href>
     </interface>
     <interface>
         <type>application/vnd.ogf.nsi.topology.v2+xml</type>
         <href>https://raw.githubusercontent.com/AutomatedGOLE/nsi-discovery-documents/master/topology/sinet.ac.jp_2013_nml.xml</href>
     </interface>
     <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
-    <feature type="org.ogf.nsi.cs.v2.commitTimeout">300</feature>
     <peersWith role="PA">urn:ogf:network:sinet.ac.jp:2013:nsa:nsi-aggr</peersWith>
 </ns3:nsa>
 
