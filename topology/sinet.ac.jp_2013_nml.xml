@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Topology xmlns="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:sd="http://schemas.ogf.org/nsi/2013/12/services/definition"
         id="urn:ogf:network:sinet.ac.jp:2013:topology" 
-        version="2016-11-06T16:15:07.922Z">
+        version="2016-12-01T16:15:07.922Z">
     <name>sinet.ac.jp</name>
     
     <!-- Time this document is valid. -->
     <Lifetime>
-        <start>2016-11-06T16:15:07.922Z</start>
+        <start>2016-12-01T16:15:07.922Z</start>
         <end>2017-11-06T16:15:07.922Z</end>
     </Lifetime>
     
